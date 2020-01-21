@@ -1,0 +1,239 @@
+@media only screen and (min-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans Condensed', sans-serif;
+    }
+    .header {
+        widows: 100%;
+        height: 60px;
+        background-color: black;
+        border-style: solid;
+        border-bottom: 4px solid rgb(83, 64, 255);
+    }
+    .nav1 {
+        float: left;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .nav1 ul li {
+        color: gray;
+        display: inline;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    .nav1 ul li a {
+        font-family: 'Open Sans Condensed', sans-serif;
+        display: inline;
+        color: gray;
+        text-decoration: none;
+    }
+    .nav1 ul {
+        display: inline;
+        list-style-type: none;
+    }
+    .searchbar {
+        margin-left: 75%;
+        margin-top: 6px;
+        height: 40px;
+        background-color: rgb(83, 64, 255);
+        border-radius: 30px;
+        padding: 10px;
+    }
+    .search_input {
+        color: white;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 0;
+        caret-color: transparent;
+        line-height: 12px;
+        transition: width 0.4s linear;
+    }
+    .searchbar:hover>.search_input {
+        padding: 0 10px;
+        width: 150px;
+        caret-color: rgb(83, 64, 255);
+        transition: width 0.4s linear;
+    }
+    .searchbar:hover>.search_icon {
+        background: white;
+        color: #e74c3c;
+    }
+    .search_icon {
+        height: 20px;
+        width: 20px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+    }
+    /* Settings - feel free to play with these */
+    $overlay_opacity: 0.3; // 0-1
+    $overlay_pattern: 'https://d3k5xyayaartr5.cloudfront.net/_assets/pattern-overlays/patterns/black-medium-checks.png'; // Grab the url of a png from here - http://html5backgroundvideos.com/pattern-overlays/
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+    /**
+ * This part should be set separately for each video
+ * if there are multiple videos in your site.
+ * I.e. '.demo-video-wrapper' is the name of this particular video
+ */
+    .demo-video-wrapper {
+        background-image: url(https://d3k5xyayaartr5.cloudfront.net/_assets/home-video/beach-waves-loop.jpg);
+    }
+    /* Video overlay and content */
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+        /* Allows right click menu on the video */
+        background: url($overlay_pattern) left top repeat;
+        opacity: overlay_opacity;
+    }
+    .video-hero--content {
+        position: relative;
+        text-align: center;
+        color: #FFF;
+        margin: 150px 0;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    }
+    .video-hero--content h2 {
+        font-size: 34px;
+        margin: 0 0 10px;
+    }
+    .video-hero--content p {
+        font-size: 20px;
+        margin: 0;
+    }
+    /* Other stuff */
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        color: #666;
+    }
+    a {
+        text-decoration: none;
+        color: #a46497;
+    }
+    .cf:before,
+    .cf:after {
+        content: " ";
+        display: table;
+    }
+    .cf:after {
+        clear: both;
+    }
+    /* CSS from jQuery Background Video plugin */
+    /**
+ * Set default positioning as a fallback for if the plugin fails
+ */
+    .jquery-background-video-wrapper {
+        position: relative;
+        overflow: hidden;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    .jquery-background-video {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        -o-object-fit: contain;
+        object-fit: contain;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    /**
+ * Fade in videos
+ * Note the .js class - so non js users still
+ * see the video
+ */
+    .js .jquery-background-video {
+        opacity: 0;
+        -webkit-transition: opacity 300ms linear;
+        transition: opacity 300ms linear;
+    }
+    .js .jquery-background-video.is-visible {
+        opacity: 1;
+    }
+    /**
+ * Pause/play button
+ */
+    .jquery-background-video-pauseplay {
+        position: absolute;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        width: 20px;
+        height: 20px;
+        top: 15px;
+        right: 15px;
+        padding: 0;
+        cursor: pointer;
+        outline: none !important;
+    }
+    .jquery-background-video-pauseplay span {
+        display: none;
+    }
+    .jquery-background-video-pauseplay:after,
+    .jquery-background-video-pauseplay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    .jquery-background-video-pauseplay.play:before {
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 15px solid #FFF;
+    }
+    .jquery-background-video-pauseplay.pause:before,
+    .jquery-background-video-pauseplay.pause:after {
+        border-top: 10px solid #FFF;
+        border-bottom: 10px solid #FFF;
+        border-left: 5px solid #FFF;
+    }
+    .jquery-background-video-pauseplay.pause:after {
+        left: 10px;
+    }
+    .last-header {
+        width: 100%;
+        height: 250px;
+        background-color: rgb(37, 35, 35);
+        position: absolute;
+        top: 750px;
+        left: 0;
+        border-top: 2px solid rgb(83, 64, 255);
+    }
+    .cont1 {
+        width: 33.3%;
+        margin-left: 100px;
+    }
+    .ii {
+        margin-top: 5px;
+        font-size: 20px;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .ii1 {
+        color: gray;
+        font-family: sans-serif;
+    }
+}
